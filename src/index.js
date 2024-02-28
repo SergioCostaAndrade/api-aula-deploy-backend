@@ -8,11 +8,11 @@ app.use(express.json());
 
 app.get("/", async (req, res) => {
   try {
-    const agenda = await knex('agenda');
+    const agenda = await knex("agenda");
   } catch (error) {
+    console.log(error);
     return res.status(400).json({ mensagem: "Erro inesperado do servidor" });
   }
-  return res.json("Até aqui tudo bem Usando o Cyclic!");
 });
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
