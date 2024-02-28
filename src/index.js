@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/", async (req, res) => {
-  return res.json("Até aqui tudo bem!");
+  return res.json("Até aqui tudo bem Usando o Cyclic!");
 });
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
