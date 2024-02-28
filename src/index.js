@@ -9,7 +9,7 @@ app.use(express.json());
 app.get("/", async (req, res) => {
   try {
     //const agenda = await knex('agenda');
-    const carros = ["fusca", cadilac];
+    const carros = ["fusca", "cadilac"];
     return res.status(200).json({ mensagem: "teste com sucesso" });
   } catch (error) {
     console.log("erro aqui 2", error);
