@@ -10,7 +10,7 @@ app.get("/", async (req, res) => {
   try {
     const agenda = await knex('agenda');
   } catch (error) {
-    return res.status.json({ mensagem: "Erro inesperado do servidor" });
+    return res.status(400).json({ mensagem: "Erro inesperado do servidor" });
   }
   return res.json("Até aqui tudo bem Usando o Cyclic!");
 });
